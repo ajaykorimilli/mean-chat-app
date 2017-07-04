@@ -1,8 +1,6 @@
-#!/usr/bin/env node
-
-var app = require('./app');
+var app   = require('./app');
 var debug = require('debug')('mean-app:server');
-var http = require('http');
+var http  = require('http');
 
 var port = normalizePort(process.env.port || '3000');
 app.set('port', port);

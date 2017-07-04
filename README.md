@@ -5,7 +5,9 @@
 Install mongodb first, and clone this repo, then execute npm command to install node_modules:
 
 ```sh
-npm i
+npm install @angular/cli@latest -g
+npm install typescript@2.3.4 -g
+npm install
 ```
 
 To start the chat app:
