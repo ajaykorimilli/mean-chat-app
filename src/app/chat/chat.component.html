@@ -14,10 +14,12 @@
 
                 <div #scrollMe class="panel-body">
                     <ul class="chat">
+
                         <li *ngFor="let c of chats">
+
                           <div class="left clearfix" *ngIf="c.nickname===msgData.nickname; else rightchat">
                             <span class="chat-img pull-left">
-                              <img src="http://placehold.it/50/55C1E7/fff&text=ME" alt="User Avatar" class="img-circle" />
+                              <img src="https://secure.gravatar.com/avatar/b2260bb3116e209953e5a89da93c88b7" alt="User Avatar" class="img-circle" />
                             </span>
                             <div class="chat-body clearfix">
                                 <div class="header">
@@ -31,7 +33,7 @@
                           <ng-template #rightchat>
                             <div class="right clearfix">
                               <span class="chat-img pull-right">
-                                <img src="http://placehold.it/50/FA6F57/fff&text=U" alt="User Avatar" class="img-circle" />
+                                <img src="https://secure.gravatar.com/avatar/b2260bb3116e209953e5a89da93c88b7" alt="User Avatar" class="img-circle" />
                               </span>
                               <div class="chat-body clearfix">
                                   <div class="header">
@@ -44,6 +46,7 @@
                           </ng-template>
 
                         </li>
+
                     </ul>
                 </div>
 
