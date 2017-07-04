@@ -1,11 +1,11 @@
 import { Component, OnInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
 import { ChatService } from '../chat.service';
-import * as io from 'socket.io-client;
+import * as io from 'socket.io-client';
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css']
+  styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit, AfterViewChecked {
 

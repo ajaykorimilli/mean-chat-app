@@ -28,7 +28,7 @@ function onError(error) {
     throw error;
   }
 
-  var bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
+  var bind = typeof port === 'string' ? 'pipe ' + port : 'port ' + port;
 
   switch (error.code) {
     case 'EACCES':

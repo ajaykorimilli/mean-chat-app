@@ -3,16 +3,15 @@ var path       = require('path');
 var favicon    = require('serve-favicon');
 var logger     = require('morgan');
 var bodyParser = require('body-parser');
-var mongoose   = require('mongoose');
 
 var chat = require('./routes/chat');
 var app  = express();
 
+var mongoose   = require('mongoose');
 mongoose.Promise = global.Promise;
-
-mongoose.connect('mongodb://localhost/mean-chat')
-  .then(() =>  console.log('connection successful'))
-  .catch((err) => console.error(err));
+mongoose.connect('mongodb://127.0.0.1/mean-chat', { useMongoClient: true })
+  .then( () => console.log('mongodb connection successful') )
+  .catch( (err) => console.error(err) );
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -30,7 +29,6 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
